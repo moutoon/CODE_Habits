@@ -26,6 +26,7 @@ class ArticleFactory extends Factory
             'total_time' => $this->faker->numberBetween(1, 100),
             'total_days' => $this->faker->numberBetween(1, 100),
             'running_days' => $this->faker->numberBetween(1, 100),
+            'created_at' => $this->faker->dateTimeBetween('-10days', '0days'),
             'updated_at' => $this->faker->dateTimeBetween('-10days', '0days')->format('Y-m-d'),
         ];
     }

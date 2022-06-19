@@ -16,7 +16,7 @@ class Article extends Model
     public function getArticleList()
     {
         try {
-            $articles = $this->get();
+            $articles = $this->orderBy('created_at', 'desc')->get();
             return $articles;
         } catch (\Exception $e) {
             Log::emergency('記事一覧の取得に失敗しました' . $articles) ;
